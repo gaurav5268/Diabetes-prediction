@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#0f172a;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .card{
+            background:#020617;
+            padding:25px;
+            width:600px;
+            border-radius:15px;
+            box-shadow:0 0 10px #0891b2;
+        }
+
+        input,select{
+            width:100%;
+            padding:8px;
+            margin-top:6px;
+            border-radius:8px;
+            border:none;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            margin-top:12px;
+            border-radius:8px;
+            border:none;
+            background:#06b6d4;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .result{ margin-top:12px;font-size:18px; }
+        .warn{ color:#f87171; }
+        .ok{ color:#4ade80; }
+
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>🩺 Diabetes Risk Prediction</h2>
+
+<label>Pregnancies</label>
+<select id="Pregnancies">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2" selected>2</option>
+  <option value="3">3</option>
+  <option value="4">4+</option>
+</select>
+
+<label>Glucose</label>
+<input id="Glucose" value="155">
+
+<label>Blood Pressure</label>
+<input id="BloodPressure" value="82">
+
+<label>Skin Thickness</label>
+<input id="SkinThickness" value="32">
+
+<label>Insulin</label>
+<input id="Insulin" value="140">
+
+<label>BMI</label>
+<input id="BMI" value="33.2">
+
+<label>Diabetes Pedigree Function</label>
+<input id="DiabetesPedigreeFunction" value="0.65">
+
+<label>Age</label>
+<input id="Age" value="45">
+
+<button onclick="predict()">Predict</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<div style="
+    background:#020617;
+    padding:30px;
+    width:300px;
+    border-radius:15px;
+    box-shadow:0 0 10px #0891b2;
+    margin-left:100px;
+">
+
+<!-- <div style="
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+    justify-content:center;
+    padding:10px 20px;
+"> -->
+
+
+<h3> Health Awareness Guide</h3>
+
+<p style="font-size:13px;color:#9ca3af;margin-top:-5px;">
+These ranges are for awareness only.
+</p>
+
+<div style="margin-top:10px;font-size:14px;line-height:20px">
+
+<b>Glucose</b> (mg/dL)<br>
+🟢 70–99 &nbsp; Normal<br>
+🟡 100–125 Prediabetes<br>
+🔴 126+ Diabetes
+<hr>
+
+<b>Blood Pressure</b> (mm Hg)<br>
+🟢 80–120 Normal<br>
+🟡 121–139 Elevated<br>
+🔴 140+ High
+<hr>
+
+<b>BMI</b><br>
+🟢 18.5–24.9 Normal<br>
+🟡 25–29.9 Overweight<br>
+🔴 30+ Obese
+<hr>
+
+<b>Insulin</b> (µU/mL)<br>
+🟢 16–166 Normal<br>
+🟡 167–200 Borderline<br>
+🔴 200+ High
+<hr>
+
+<b>Age Risk Zone</b><br>
+🟢 &lt;35 Low<br>
+🟡 35–45 Moderate<br>
+🔴 45+ High
+
+</div>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
