@@ -2,4 +2,3 @@
 ml_env/
 Dockerfile
 __pycache__/
-*.pkl
