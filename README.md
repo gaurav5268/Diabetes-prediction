@@ -125,7 +125,7 @@ Step 2 — Shortlisted Top Performing Models
             ✔ Lower False Negatives
             ✔ Early-risk detection
 
-🧪 Threshold Optimization
+hreshold Optimization
 
 Instead of using the default threshold 0.50,
 multiple probability thresholds were tested:
@@ -141,7 +141,7 @@ The goal was to find a balance between:
 
 F1 Score
 
-📌 Threshold = 0.20 gave the best medical value
+Threshold = 0.20 gave the best medical value
 
 It helps:
 
@@ -155,7 +155,7 @@ Final Selected Model
 - Threshold     : 0.20
 - Decision Rule : Predict Diabetic if Probability ≥ 0.20
 
-✅ Why LightGBM was chosen
+## Why LightGBM was chosen
 
 - Best Recall performance
 
@@ -167,7 +167,7 @@ Final Selected Model
 
 - Better handling of feature interactions
 
-## 🧩 Tech Stack
+## Tech Stack
 
 **Languages**
 - Python
@@ -188,7 +188,7 @@ Final Selected Model
 
 ---
 
-## 🏗 Project Architecture
+## Project Architecture
 
 ```
 data/
@@ -206,9 +206,9 @@ Dockerfile
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
-### 🔹 1️⃣ Create Virtual Environment
+### 🔹 1️ Create Virtual Environment
 
 ```bash
 python -m venv ml_env
@@ -217,7 +217,7 @@ source ml_env/Scripts/activate   # Windows
 
 ---
 
-### 🔹 2️⃣ Install Dependencies
+### 🔹 2️ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -225,7 +225,7 @@ pip install -r requirements.txt
 
 ---
 
-### 🔹 3️⃣ Run Flask App
+### 🔹 3️ Run Flask App
 
 ```bash
 python app.py
@@ -239,7 +239,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🧮 Model Training Summary
+## Model Training Summary
 
 Base models tested:
 
@@ -295,26 +295,7 @@ POST /predict
 }
 ```
 
----
-
-## 🐳 Docker Support
-
-```
-docker build -t diabetes-app .
-docker run -p 5000:5000 diabetes-app
-```
 
 ---
-
-## 📌 Future Improvements
-
-- Add SHAP model explainability
-- Add training pipeline CLI
-- Add REST API docs (Swagger UI)
-- Deploy on AWS EC2 / ECS / Lambda
-
----
-
-## 👨‍💻 Author
 
 **Gaurav Chauhan**  
